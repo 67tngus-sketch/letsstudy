@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="관세법 빈칸" />
+  <meta name="theme-color" content="#1f5fbf" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>관세법 빈칸</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="stylesheet" href="style.css?v=20261124003625" />
+</head>
+<body class="mobile">
+  <div id="root"></div>
+  <noscript>이 앱은 자바스크립트가 필요합니다.</noscript>
+  <script src="app.js?v=20261124003625"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js").catch(function (e) { console.warn("오프라인 저장 실패", e); }); });
+    }
+  </script>
+</body>
+</html>
