@@ -124,6 +124,7 @@ table.kv td { padding: 6px 0; }
 .verdict-top h2 { margin: 0; }
 .banner.warn { background: var(--hold-bg); color: var(--hold); }
 button.block { width: 100%; padding: 14px; font-size: 18px; }
+.trap { margin-top: 6px; padding: 6px 10px; border-radius: 8px; background: var(--hold-bg); color: var(--hold); font-size: 14px; }
 /* 아이폰 전용 보정 */
 body.mobile { font-size: 16px; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
 body.mobile .app { padding: 0 12px calc(80px + env(safe-area-inset-bottom)); padding-top: env(safe-area-inset-top); }
