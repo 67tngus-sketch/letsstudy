@@ -245,6 +245,45 @@ main button.danger:not(.btn):not(.link) { color: var(--error); }
 .item-detail label > input, .item-detail label > textarea { margin-top: 4px; color: var(--text); }
 .item-detail h2 { font-size: 16px; line-height: 1.5; }
 .card h2 + p, .card h3 + p { margin-top: 6px; }
+
+/* 채점 결과: 정답으로 인정 */
+.accept-box { margin-top: 12px; padding-top: 10px; border-top: 1px dashed color-mix(in srgb, currentColor 25%, transparent); display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.accept-box .small:first-child { flex-basis: 100%; }
+.accept-box label { display: inline-flex; align-items: center; gap: 6px; }
+.accept-box input[type=checkbox] { width: 18px; height: 18px; accent-color: #2563EB; }
+
+/* ---------- OX 퀴즈 ---------- */
+.badge.ox-tag { background: var(--surface-2); color: var(--text); letter-spacing: .5px; }
+.tag.new { background: var(--error); color: #fff; font-size: 10px; font-weight: 800; padding: 1px 7px; vertical-align: 2px; }
+.tag.src { background: var(--primary-soft); color: var(--primary); margin: 0 6px 0 0; }
+.ox-q .q-meta { margin-bottom: var(--sp-3); }
+.ox-statement { font-size: 19px; line-height: 1.75; font-weight: 600; margin: 0; word-break: keep-all; overflow-wrap: anywhere; letter-spacing: -.2px; }
+.ox-q .ghost { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.ox-wrong { color: var(--coral); text-decoration: line-through; text-decoration-thickness: 2px; background: var(--error-soft); border-radius: 4px; padding: 0 2px; }
+.ox-right { text-decoration: none; color: var(--success); background: var(--success-soft); border-radius: 4px; padding: 0 3px; margin-left: 3px; font-weight: 700; }
+.ox-answer-chip { display: inline-flex; align-items: center; gap: 6px; margin-top: var(--sp-3); padding: 4px 12px 4px 8px; border-radius: 99px; font-size: 13px; font-weight: 700; }
+.ox-answer-chip.o { background: var(--primary-soft); color: var(--primary); }
+.ox-answer-chip.x { background: var(--error-soft); color: var(--error); }
+.oxm.o { color: var(--primary); } .oxm.x { color: var(--error); }
+.oxm { flex: none; vertical-align: -3px; }
+
+/* 하단 O / X 버튼: 같은 크기, 엄지가 닿는 화면 아래쪽 */
+.actionbar.ox-bar .inner { gap: var(--sp-3); }
+.ox-btn { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; height: 112px; border: 0; border-radius: var(--r-lg);
+  font: inherit; font-size: 13px; font-weight: 600; color: var(--text-2); cursor: pointer; -webkit-tap-highlight-color: transparent;
+  transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease; position: relative; }
+.ox-btn.o { background: var(--primary-tint); box-shadow: inset 0 0 0 1.5px var(--primary-soft); }
+.ox-btn.x { background: var(--error-soft); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--error) 18%, transparent); }
+.ox-btn:active { transform: scale(.96); }
+.ox-btn kbd { position: absolute; top: 8px; right: 10px; }
+@media (max-height: 640px) { .ox-btn { height: 92px; } }
+
+.ox-compare dd { display: flex; align-items: center; gap: 8px; font-weight: 700; }
+.ox-diffs { margin-top: var(--sp-3); padding-top: var(--sp-3); border-top: 1px dashed color-mix(in srgb, currentColor 22%, transparent); }
+.ox-diff { margin-top: 6px; line-height: 1.6; font-size: 15px; }
+.ox-diff .arrow { color: var(--text-3); margin: 0 6px; }
+.ox-diff .ox-right { margin-left: 0; }
+.study.ox-mode { padding-bottom: 60px; }
 /* 아이폰 전용 보정 (디자인 규칙은 style.css 공통) */
 body.mobile { overscroll-behavior-y: none; }
 body.mobile .app { padding-left: max(var(--sp-4), env(safe-area-inset-left)); padding-right: max(var(--sp-4), env(safe-area-inset-right)); }
