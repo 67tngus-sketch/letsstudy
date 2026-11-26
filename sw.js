@@ -1,8 +1,8 @@
 // 오프라인 동작용 서비스 워커.
 // 인터넷이 되면 새 파일을 먼저 받아(최대 3초) 저장해 두고, 안 되면 저장본으로 동작한다.
 // → GitHub에 새 파일을 올리면 앱을 한 번 다시 열 때 바로 반영된다.
-const CACHE = "kwanse-20261126214028";
-const SHELL = ["./", "index.html", "app.js?v=20261126214028", "style.css?v=20261126214028", "manifest.webmanifest",
+const CACHE = "kwanse-20261126223232";
+const SHELL = ["./", "index.html", "app.js?v=20261126223232", "style.css?v=20261126223232", "manifest.webmanifest",
   "apple-touch-icon.png", "icon-192.png", "icon-512.png", "bank.json", "exams.json", "laws.json"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
