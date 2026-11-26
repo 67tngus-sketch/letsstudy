@@ -284,6 +284,33 @@ main button.danger:not(.btn):not(.link) { color: var(--error); }
 .ox-diff .arrow { color: var(--text-3); margin: 0 6px; }
 .ox-diff .ox-right { margin-left: 0; }
 .study.ox-mode { padding-bottom: 60px; }
+
+/* 유형별 집중 학습 */
+.seg.seg-block { display: flex; width: 100%; }
+.seg.seg-block button { flex: 1; min-height: 40px; padding: 6px 4px; font-size: 14px; }
+.opt-label { font-size: 13px; font-weight: 700; color: var(--text-2); margin: 14px 0 6px; }
+.opt-label:first-child { margin-top: 0; }
+.focus-tag { gap: 10px; margin-top: 16px; font-size: 14px; align-items: flex-start; }
+.focus-tag input { width: 22px; height: 22px; flex: none; margin: 0; }
+.focus-sum .focus-nums { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin: 12px 0 8px; text-align: center; }
+.focus-nums b { display: block; font-size: 18px; }
+.focus-nums small { color: var(--text-2); font-size: 12px; }
+.focus-start { margin-top: 18px; }
+.focus-start .muted { text-align: center; margin-bottom: 6px; min-height: 18px; }
+.type-stats { margin-top: 6px; }
+.type-stat { display: block; padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--text); text-decoration: none; }
+.type-stat:last-child { border-bottom: 0; }
+.type-stat:active { background: var(--surface-2); }
+.type-stat .ts-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.type-stat .nm { flex: 1; font-weight: 600; font-size: 15px; }
+.type-stat .acc { font-weight: 700; font-size: 14px; color: var(--primary); }
+.type-stat .acc.none { color: var(--text-3); font-weight: 600; }
+.type-stat svg { color: var(--text-3); }
+.type-stat .ts-sub { font-size: 12.5px; color: var(--text-2); margin-top: 5px; }
+.weak-line { margin: 8px 0 2px; padding: 8px 12px; border-radius: 10px; background: var(--error-soft); color: var(--error); font-size: 13px; font-weight: 600; }
+.repeat-note { margin-bottom: 8px; padding: 6px 10px; border-radius: 8px; background: var(--primary-soft); color: var(--primary); font-size: 13px; font-weight: 600; }
+.type-stat .acc.weak { color: var(--error); }
+.focus-note { margin: 8px 0 0; text-align: center; }
 /* 아이폰 전용 보정 (디자인 규칙은 style.css 공통) */
 body.mobile { overscroll-behavior-y: none; }
 body.mobile .app { padding-left: max(var(--sp-4), env(safe-area-inset-left)); padding-right: max(var(--sp-4), env(safe-area-inset-right)); }
